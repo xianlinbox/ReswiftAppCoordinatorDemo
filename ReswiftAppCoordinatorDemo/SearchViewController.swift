@@ -3,12 +3,12 @@
 //  ReswiftAppCoordinatorDemo
 //
 //  Created by Xianning Liu on 03/01/2017.
-//  Copyright © 2017 Southewst Airlines. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SearchViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

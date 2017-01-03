@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		DF30726D1E1BA625005AA130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30726C1E1BA625005AA130 /* AppDelegate.swift */; };
-		DF30726F1E1BA625005AA130 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30726E1E1BA625005AA130 /* ViewController.swift */; };
+		DF30726F1E1BA625005AA130 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30726E1E1BA625005AA130 /* SearchViewController.swift */; };
 		DF3072721E1BA625005AA130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3072701E1BA625005AA130 /* Main.storyboard */; };
 		DF3072741E1BA625005AA130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF3072731E1BA625005AA130 /* Assets.xcassets */; };
 		DF3072771E1BA625005AA130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3072751E1BA625005AA130 /* LaunchScreen.storyboard */; };
 		DF3072821E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3072811E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift */; };
 		DF30728E1E1BB2EA005AA130 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF30728D1E1BB2EA005AA130 /* ReSwift.framework */; };
+		DF3072901E1BE7D5005AA130 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30728F1E1BE7D5005AA130 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +30,7 @@
 /* Begin PBXFileReference section */
 		DF3072691E1BA625005AA130 /* ReswiftAppCoordinatorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReswiftAppCoordinatorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF30726C1E1BA625005AA130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF30726E1E1BA625005AA130 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF30726E1E1BA625005AA130 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DF3072711E1BA625005AA130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF3072731E1BA625005AA130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF3072761E1BA625005AA130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 		DF3072811E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReswiftAppCoordinatorDemoTests.swift; sourceTree = "<group>"; };
 		DF3072831E1BA625005AA130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF30728D1E1BB2EA005AA130 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
+		DF30728F1E1BE7D5005AA130 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +84,12 @@
 			isa = PBXGroup;
 			children = (
 				DF30726C1E1BA625005AA130 /* AppDelegate.swift */,
-				DF30726E1E1BA625005AA130 /* ViewController.swift */,
+				DF30726E1E1BA625005AA130 /* SearchViewController.swift */,
 				DF3072701E1BA625005AA130 /* Main.storyboard */,
 				DF3072731E1BA625005AA130 /* Assets.xcassets */,
 				DF3072751E1BA625005AA130 /* LaunchScreen.storyboard */,
 				DF3072781E1BA625005AA130 /* Info.plist */,
+				DF30728F1E1BE7D5005AA130 /* AppCoordinator.swift */,
 			);
 			path = ReswiftAppCoordinatorDemo;
 			sourceTree = "<group>";
@@ -212,7 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF30726F1E1BA625005AA130 /* ViewController.swift in Sources */,
+				DF3072901E1BE7D5005AA130 /* AppCoordinator.swift in Sources */,
+				DF30726F1E1BA625005AA130 /* SearchViewController.swift in Sources */,
 				DF30726D1E1BA625005AA130 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

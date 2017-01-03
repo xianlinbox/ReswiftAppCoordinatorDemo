@@ -3,7 +3,6 @@
 //  ReswiftAppCoordinatorDemo
 //
 //  Created by Xianning Liu on 03/01/2017.
-//  Copyright © 2017 Southewst Airlines. All rights reserved.
 //
 
 import UIKit
@@ -12,6 +11,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var coordinator: AppCoordinator!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
