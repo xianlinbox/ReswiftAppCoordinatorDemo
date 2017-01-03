@@ -13,6 +13,7 @@
 		DF3072741E1BA625005AA130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF3072731E1BA625005AA130 /* Assets.xcassets */; };
 		DF3072771E1BA625005AA130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3072751E1BA625005AA130 /* LaunchScreen.storyboard */; };
 		DF3072821E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3072811E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift */; };
+		DF30728E1E1BB2EA005AA130 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF30728D1E1BB2EA005AA130 /* ReSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		DF30727D1E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReswiftAppCoordinatorDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3072811E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReswiftAppCoordinatorDemoTests.swift; sourceTree = "<group>"; };
 		DF3072831E1BA625005AA130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF30728D1E1BB2EA005AA130 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF30728E1E1BB2EA005AA130 /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +65,7 @@
 				DF30726B1E1BA625005AA130 /* ReswiftAppCoordinatorDemo */,
 				DF3072801E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests */,
 				DF30726A1E1BA625005AA130 /* Products */,
+				DF30728C1E1BB2EA005AA130 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +98,14 @@
 				DF3072831E1BA625005AA130 /* Info.plist */,
 			);
 			path = ReswiftAppCoordinatorDemoTests;
+			sourceTree = "<group>";
+		};
+		DF30728C1E1BB2EA005AA130 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF30728D1E1BB2EA005AA130 /* ReSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +158,7 @@
 				TargetAttributes = {
 					DF3072681E1BA625005AA130 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = TX44MTV4A5;
 						ProvisioningStyle = Automatic;
 					};
 					DF30727C1E1BA625005AA130 = {
@@ -337,6 +350,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TX44MTV4A5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReswiftAppCoordinatorDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xianlinbox.ReswiftAppCoordinatorDemo;
@@ -349,6 +367,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TX44MTV4A5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReswiftAppCoordinatorDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xianlinbox.ReswiftAppCoordinatorDemo;
