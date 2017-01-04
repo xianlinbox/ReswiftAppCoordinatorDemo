@@ -6,18 +6,42 @@
 //
 
 import UIKit
+import ReSwift
 
-class SearchViewController: UIViewController {
-    
+class SearchViewController: UIViewController, StoreSubscriber {
+
+    typealias StoreSubscriberStateType = AppState
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        mainStore.subscribe(self) { state in state }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        mainStore.unsubscribe(self)
+    }
+
+    // MARK: State Updates
+    func newState(state: AppState) {
+        
+    }
+
+    @IBAction func searchByCity() {
+
+    }
+
+    @IBAction func searchByCurrentLocation() {
+
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
