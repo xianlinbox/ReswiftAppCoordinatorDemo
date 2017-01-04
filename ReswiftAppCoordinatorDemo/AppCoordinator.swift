@@ -9,12 +9,15 @@ import Foundation
 import UIKit
 
 class AppCoordinator {
-    var rootController: UINavigationController
+    var rootVC: UINavigationController
 
-    init(){
-        let searchVC = SearchViewController()
-        searchVC.coordinator = self
-        rootController = UINavigationController(rootViewController: searchVC)
+    init(rootVC: UINavigationController){
+        self.rootVC = rootVC
+    }
+
+    func start() {
+        let searchVC = SearchViewController();
+        self.rootVC.pushViewController(searchVC, animated: true)
     }
 }
 

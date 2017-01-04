@@ -13,8 +13,17 @@
 		DF3072741E1BA625005AA130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF3072731E1BA625005AA130 /* Assets.xcassets */; };
 		DF3072771E1BA625005AA130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3072751E1BA625005AA130 /* LaunchScreen.storyboard */; };
 		DF3072821E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3072811E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift */; };
-		DF30728E1E1BB2EA005AA130 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF30728D1E1BB2EA005AA130 /* ReSwift.framework */; };
 		DF3072901E1BE7D5005AA130 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30728F1E1BE7D5005AA130 /* AppCoordinator.swift */; };
+		DF74B9B21E1C8EAB0028246C /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF30728D1E1BB2EA005AA130 /* ReSwift.framework */; };
+		DF74B9B41E1C8F130028246C /* ReSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF30728D1E1BB2EA005AA130 /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		DF74B9B71E1C906A0028246C /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF74B9B61E1C906A0028246C /* SearchView.xib */; };
+		DF74B9B81E1C906A0028246C /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF74B9B61E1C906A0028246C /* SearchView.xib */; };
+		DF74B9BD1E1C91F00028246C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9BC1E1C91F00028246C /* SearchView.swift */; };
+		DF74B9BE1E1C91F00028246C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9BC1E1C91F00028246C /* SearchView.swift */; };
+		DF74B9C11E1C92230028246C /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9C01E1C92230028246C /* colors.swift */; };
+		DF74B9C21E1C92230028246C /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9C01E1C92230028246C /* colors.swift */; };
+		DF74B9C41E1C92310028246C /* fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9C31E1C92310028246C /* fonts.swift */; };
+		DF74B9C51E1C92310028246C /* fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9C31E1C92310028246C /* fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +35,19 @@
 			remoteInfo = ReswiftAppCoordinatorDemo;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DF74B9B31E1C8EF30028246C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				DF74B9B41E1C8F130028246C /* ReSwift.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DF3072691E1BA625005AA130 /* ReswiftAppCoordinatorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReswiftAppCoordinatorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +62,10 @@
 		DF3072831E1BA625005AA130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF30728D1E1BB2EA005AA130 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		DF30728F1E1BE7D5005AA130 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DF74B9B61E1C906A0028246C /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		DF74B9BC1E1C91F00028246C /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		DF74B9C01E1C92230028246C /* colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
+		DF74B9C31E1C92310028246C /* fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF30728E1E1BB2EA005AA130 /* ReSwift.framework in Frameworks */,
+				DF74B9B21E1C8EAB0028246C /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,13 +109,14 @@
 		DF30726B1E1BA625005AA130 /* ReswiftAppCoordinatorDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DF74B9BF1E1C92120028246C /* Themes */,
+				DF74B9B51E1C90210028246C /* Views */,
 				DF30726C1E1BA625005AA130 /* AppDelegate.swift */,
-				DF30726E1E1BA625005AA130 /* SearchViewController.swift */,
+				DF30728F1E1BE7D5005AA130 /* AppCoordinator.swift */,
 				DF3072701E1BA625005AA130 /* Main.storyboard */,
 				DF3072731E1BA625005AA130 /* Assets.xcassets */,
 				DF3072751E1BA625005AA130 /* LaunchScreen.storyboard */,
 				DF3072781E1BA625005AA130 /* Info.plist */,
-				DF30728F1E1BE7D5005AA130 /* AppCoordinator.swift */,
 			);
 			path = ReswiftAppCoordinatorDemo;
 			sourceTree = "<group>";
@@ -111,6 +138,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DF74B9B51E1C90210028246C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF30726E1E1BA625005AA130 /* SearchViewController.swift */,
+				DF74B9B61E1C906A0028246C /* SearchView.xib */,
+				DF74B9BC1E1C91F00028246C /* SearchView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DF74B9BF1E1C92120028246C /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				DF74B9C01E1C92230028246C /* colors.swift */,
+				DF74B9C31E1C92310028246C /* fonts.swift */,
+			);
+			name = Themes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,6 +167,7 @@
 				DF3072651E1BA625005AA130 /* Sources */,
 				DF3072661E1BA625005AA130 /* Frameworks */,
 				DF3072671E1BA625005AA130 /* Resources */,
+				DF74B9B31E1C8EF30028246C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -157,7 +204,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
-				ORGANIZATIONNAME = "Southewst Airlines";
+				ORGANIZATIONNAME = xianlinbox;
 				TargetAttributes = {
 					DF3072681E1BA625005AA130 = {
 						CreatedOnToolsVersion = 8.1;
@@ -195,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF74B9B71E1C906A0028246C /* SearchView.xib in Resources */,
 				DF3072771E1BA625005AA130 /* LaunchScreen.storyboard in Resources */,
 				DF3072741E1BA625005AA130 /* Assets.xcassets in Resources */,
 				DF3072721E1BA625005AA130 /* Main.storyboard in Resources */,
@@ -205,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF74B9B81E1C906A0028246C /* SearchView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,8 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF74B9BD1E1C91F00028246C /* SearchView.swift in Sources */,
+				DF74B9C11E1C92230028246C /* colors.swift in Sources */,
 				DF3072901E1BE7D5005AA130 /* AppCoordinator.swift in Sources */,
 				DF30726F1E1BA625005AA130 /* SearchViewController.swift in Sources */,
+				DF74B9C41E1C92310028246C /* fonts.swift in Sources */,
 				DF30726D1E1BA625005AA130 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF74B9C51E1C92310028246C /* fonts.swift in Sources */,
+				DF74B9BE1E1C91F00028246C /* SearchView.swift in Sources */,
+				DF74B9C21E1C92230028246C /* colors.swift in Sources */,
 				DF3072821E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -342,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -431,6 +486,7 @@
 				DF3072881E1BA625005AA130 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF3072891E1BA625005AA130 /* Build configuration list for PBXNativeTarget "ReswiftAppCoordinatorDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +495,7 @@
 				DF30728B1E1BA625005AA130 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
