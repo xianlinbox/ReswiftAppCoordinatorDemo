@@ -29,7 +29,7 @@ class SearchViewController: UIViewController, StoreSubscriber {
     }
 
     @IBAction func searchByCity() {
-
+        mainStore.dispatch(UpdateSearchPlaceName(placeName: ""))
     }
 
     @IBAction func searchByCurrentLocation() {

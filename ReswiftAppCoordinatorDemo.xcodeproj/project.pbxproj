@@ -33,6 +33,8 @@
 		DF74B9DC1E1CE2F70028246C /* LoadingActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9DA1E1CE2F70028246C /* LoadingActions.swift */; };
 		DF74B9DE1E1CE3630028246C /* ErrorMessageActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9DD1E1CE3630028246C /* ErrorMessageActions.swift */; };
 		DF74B9DF1E1CE3630028246C /* ErrorMessageActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9DD1E1CE3630028246C /* ErrorMessageActions.swift */; };
+		DF74B9E21E1CF3EB0028246C /* PropertyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9E11E1CF3EB0028246C /* PropertyApi.swift */; };
+		DF74B9E31E1CF3EB0028246C /* PropertyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9E11E1CF3EB0028246C /* PropertyApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,7 @@
 		DF74B9D71E1CDF680028246C /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		DF74B9DA1E1CE2F70028246C /* LoadingActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingActions.swift; sourceTree = "<group>"; };
 		DF74B9DD1E1CE3630028246C /* ErrorMessageActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessageActions.swift; sourceTree = "<group>"; };
+		DF74B9E11E1CF3EB0028246C /* PropertyApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,7 @@
 				DF74B9BF1E1C92120028246C /* Themes */,
 				DF74B9C71E1CADE10028246C /* Reducers */,
 				DF74B9C61E1CADBE0028246C /* Actions */,
+				DF74B9E01E1CF3BF0028246C /* API */,
 				DF74B9B51E1C90210028246C /* Views */,
 				DF30726C1E1BA625005AA130 /* AppDelegate.swift */,
 				DF30728F1E1BE7D5005AA130 /* AppCoordinator.swift */,
@@ -188,6 +192,14 @@
 				DF74B9D71E1CDF680028246C /* AppReducer.swift */,
 			);
 			name = Reducers;
+			sourceTree = "<group>";
+		};
+		DF74B9E01E1CF3BF0028246C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DF74B9E11E1CF3EB0028246C /* PropertyApi.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +315,7 @@
 				DF74B9DE1E1CE3630028246C /* ErrorMessageActions.swift in Sources */,
 				DF74B9DB1E1CE2F70028246C /* LoadingActions.swift in Sources */,
 				DF74B9C91E1CAF660028246C /* AppState.swift in Sources */,
+				DF74B9E21E1CF3EB0028246C /* PropertyApi.swift in Sources */,
 				DF3072901E1BE7D5005AA130 /* AppCoordinator.swift in Sources */,
 				DF30726F1E1BA625005AA130 /* SearchViewController.swift in Sources */,
 				DF74B9C41E1C92310028246C /* fonts.swift in Sources */,
@@ -315,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF74B9C51E1C92310028246C /* fonts.swift in Sources */,
+				DF74B9E31E1CF3EB0028246C /* PropertyApi.swift in Sources */,
 				DF74B9CA1E1CAF660028246C /* AppState.swift in Sources */,
 				DF74B9BE1E1C91F00028246C /* SearchView.swift in Sources */,
 				DF74B9DC1E1CE2F70028246C /* LoadingActions.swift in Sources */,
