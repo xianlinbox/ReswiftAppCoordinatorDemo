@@ -14,7 +14,7 @@
 		DF3072821E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3072811E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift */; };
 		DF3072901E1BE7D5005AA130 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30728F1E1BE7D5005AA130 /* AppCoordinator.swift */; };
 		DF74B9B21E1C8EAB0028246C /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF30728D1E1BB2EA005AA130 /* ReSwift.framework */; };
-		DF74B9B41E1C8F130028246C /* ReSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF30728D1E1BB2EA005AA130 /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		DF74B9B41E1C8F130028246C /* ReSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF30728D1E1BB2EA005AA130 /* ReSwift.framework */; };
 		DF74B9B71E1C906A0028246C /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF74B9B61E1C906A0028246C /* SearchView.xib */; };
 		DF74B9B81E1C906A0028246C /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF74B9B61E1C906A0028246C /* SearchView.xib */; };
 		DF74B9BD1E1C91F00028246C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9BC1E1C91F00028246C /* SearchView.swift */; };
@@ -35,6 +35,8 @@
 		DF74B9DF1E1CE3630028246C /* ErrorMessageActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9DD1E1CE3630028246C /* ErrorMessageActions.swift */; };
 		DF74B9E21E1CF3EB0028246C /* PropertyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9E11E1CF3EB0028246C /* PropertyApi.swift */; };
 		DF74B9E31E1CF3EB0028246C /* PropertyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9E11E1CF3EB0028246C /* PropertyApi.swift */; };
+		DF74B9E51E1CF7420028246C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF74B9E41E1CF7420028246C /* Alamofire.framework */; };
+		DF74B9E71E1CF75C0028246C /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF74B9E61E1CF75C0028246C /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				DF74B9E71E1CF75C0028246C /* Alamofire.framework in CopyFiles */,
 				DF74B9B41E1C8F130028246C /* ReSwift.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +85,8 @@
 		DF74B9DA1E1CE2F70028246C /* LoadingActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingActions.swift; sourceTree = "<group>"; };
 		DF74B9DD1E1CE3630028246C /* ErrorMessageActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessageActions.swift; sourceTree = "<group>"; };
 		DF74B9E11E1CF3EB0028246C /* PropertyApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyApi.swift; sourceTree = "<group>"; };
+		DF74B9E41E1CF7420028246C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		DF74B9E61E1CF75C0028246C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF74B9E51E1CF7420028246C /* Alamofire.framework in Frameworks */,
 				DF74B9B21E1C8EAB0028246C /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +112,7 @@
 		DF3072601E1BA625005AA130 = {
 			isa = PBXGroup;
 			children = (
+				DF74B9E61E1CF75C0028246C /* Alamofire.framework */,
 				DF30726B1E1BA625005AA130 /* ReswiftAppCoordinatorDemo */,
 				DF3072801E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests */,
 				DF30726A1E1BA625005AA130 /* Products */,
@@ -152,6 +159,7 @@
 		DF30728C1E1BB2EA005AA130 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF74B9E41E1CF7420028246C /* Alamofire.framework */,
 				DF30728D1E1BB2EA005AA130 /* ReSwift.framework */,
 			);
 			name = Frameworks;
