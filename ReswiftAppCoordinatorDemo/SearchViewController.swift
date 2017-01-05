@@ -11,6 +11,7 @@ import ReSwift
 class SearchViewController: UIViewController, StoreSubscriber {
 
     typealias StoreSubscriberStateType = AppState
+    let propertyActionCreater = PropertyActionCreater()
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,7 +30,8 @@ class SearchViewController: UIViewController, StoreSubscriber {
     }
 
     @IBAction func searchByCity() {
-        mainStore.dispatch(UpdateSearchPlaceName(placeName: ""))
+        let searchCriteria = SearchCriteria(placeName: "london", centerPoint: nil)
+        mainStore.dispatch(propertyActionCreater.searchProperties(searchCriteria: searchCriteria))
     }
 
     @IBAction func searchByCurrentLocation() {

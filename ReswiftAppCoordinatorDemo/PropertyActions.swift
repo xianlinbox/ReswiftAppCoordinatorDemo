@@ -8,26 +8,31 @@
 
 import ReSwift
 
-struct UpdateSearchPlaceName: Action {
-    let placeName:String
+struct UpdateSearchCriteria: Action {
+    let searchCriteria:SearchCriteria
 }
 
 struct UpdateProperties: Action {
     let properties:String
 }
 
-struct searchPropertyActionCreater {
-    var propertyApi = PropertyApi.self
+struct PropertyActionCreater {
+    typealias ActionCreator = (_ state: AppState, _ store: Store<AppState>) -> Action?
+    let propertyApi = PropertyApi()
 
-    func searchProperties(state: AppState, store: Store<AppState>) -> Action? {
-
-//        Octokit(configuration).repositories { response in
-//            dispatch_async(dispatch_get_main_queue()) {
-//                store.dispatch(SetRepostories(repositories: response))
-//            }
-//        }
-        
-        return nil
+    func searchProperties(searchCriteria: SearchCriteria) -> ActionCreator {
+        return { state, store in
+            self.propertyApi.findProperties(
+                searchCriteria: searchCriteria,
+                success: { (data) in
+                    store.dispatch(EndLoading())
+                    },
+                failure: { (error) in
+                    store.dispatch(EndLoading())
+                    }
+            )
+            return StartLoading()
+        }
     }
 }
 

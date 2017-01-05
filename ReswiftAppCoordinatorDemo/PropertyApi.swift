@@ -8,7 +8,41 @@
 import Alamofire
 
 struct PropertyApi {
-    func findProperties(placeName:String) -> String{
-        return ""
+    func findProperties(searchCriteria:SearchCriteria, success: @escaping (_ response: Data?) -> Void, failure: @escaping (_ error: Error?) -> Void ) {
+
+        let parameters = parametersForQuery(searchCriteria: searchCriteria)
+
+        Alamofire.request("http://api.nestoria.co.uk/api", parameters:parameters).responseJSON(
+            completionHandler: { response in
+                switch response.result {
+                case .success:
+                    print("Validation Successful")
+                    print(response.data ?? "Data is empty")
+                    success(response.data)
+                case .failure(let error):
+                    print(error)
+                    failure(error)
+                }
+        })
     }
+
+    private func parametersForQuery(searchCriteria:SearchCriteria) -> [String : Any]{
+        var queryParameters = [
+            "country": "uk",
+            "pretty": "1",
+            "encoding": "json",
+            "listing_type": "buy",
+            "action": "search_listings",
+            "page": 1
+            ] as [String : Any]
+        if (searchCriteria.placeName != nil) {
+            queryParameters["place_name"] = searchCriteria.placeName
+        }
+        if(searchCriteria.centerPoint != nil) {
+            queryParameters["centre_point"] = searchCriteria.centerPoint
+        }
+        
+        return queryParameters
+    }
+    
 }

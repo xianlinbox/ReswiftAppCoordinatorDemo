@@ -50,10 +50,9 @@ struct AppReducer: Reducer {
         var state = state ?? PropertyState()
 
         switch action {
-        case let action as UpdateSearchPlaceName:
-            state.placeName = action.placeName
+        case let action as UpdateSearchCriteria:
+            state.searchCriteria = action.searchCriteria
         case _ as UpdateProperties:
-//            let response = action.properties
             state.properties = []
         default:
             break

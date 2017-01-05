@@ -10,12 +10,17 @@ import ReSwift
 struct AppState: StateType {
     var isLoading:Bool = false
     var errorMessage:String?
-    var property:PropertyState = PropertyState()
+    var property:PropertyState
 }
 
 struct PropertyState {
-    var placeName:String = "London"
-    var properties:[PropertyDetail] = []
+    var searchCriteria:SearchCriteria?
+    var properties:[PropertyDetail]?
+}
+
+struct SearchCriteria {
+    let placeName:String?
+    let centerPoint:String?
 }
 
 struct PropertyDetail {
