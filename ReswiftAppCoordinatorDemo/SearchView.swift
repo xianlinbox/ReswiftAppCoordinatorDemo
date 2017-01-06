@@ -16,6 +16,10 @@ class SearchView:XibBaseView {
     var locationButtonOnClick: (() -> Void)?
 
     @IBAction func goButtonTapped() {
+        if self.placeNameField.text == "" {
+            self.placeNameField.text = self.placeNameField.placeholder
+        }
+        
         let searchCriteria = SearchCriteria(
             placeName: self.placeNameField.text,
             centerPoint:nil

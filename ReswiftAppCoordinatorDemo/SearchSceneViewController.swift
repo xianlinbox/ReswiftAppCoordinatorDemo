@@ -18,7 +18,6 @@ class SearchSceneViewController: BaseViewController {
         if let searchCriteria = state.property.searchCriteria {
             searchView?.update(searchCriteria: searchCriteria)
         }
-
         super.newState(state: state)
     }
     
