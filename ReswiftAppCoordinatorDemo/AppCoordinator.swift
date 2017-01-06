@@ -17,12 +17,19 @@ class AppCoordinator {
 
     func start() {
         let searchVC = SearchSceneViewController();
+        searchVC.appCoordinator = self
         self.rootVC.pushViewController(searchVC, animated: true)
+    }
+
+    func showAlert(errorMessage:String) {
+        let alert = UIAlertController(title: "Oops!", message:errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+        self.rootVC.topViewController?.present(alert, animated: true)
     }
 }
 
 extension AppCoordinator {
     func showSearchResults() {
-
+        
     }
 }

@@ -28,10 +28,11 @@ struct PropertyActionCreater {
                 searchCriteria: searchCriteria,
                 success: { (data) in
                     store.dispatch(EndLoading())
-            },
+                },
                 failure: { (error) in
                     store.dispatch(EndLoading())
-            }
+                    store.dispatch(SaveErrorMessage(errorMessage: (error?.localizedDescription)!))
+                }
             )
             return StartLoading()
         }

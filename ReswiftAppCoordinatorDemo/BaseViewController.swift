@@ -12,6 +12,7 @@ import ReSwift
 class BaseViewController: UIViewController, StoreSubscriber {
     typealias StoreSubscriberStateType = AppState
     let activityInd =  UIActivityIndicatorView(activityIndicatorStyle:.gray)
+    var appCoordinator:AppCoordinator?
 
     //MARK: update state
     func newState(state: AppState) {
@@ -20,6 +21,10 @@ class BaseViewController: UIViewController, StoreSubscriber {
             self.activityInd.startAnimating()
         } else {
             self.activityInd.stopAnimating()
+        }
+
+        if let errorMessage = state.errorMessage, !errorMessage.isEmpty {
+            self.appCoordinator?.showAlert(errorMessage: errorMessage)
         }
     }
 
