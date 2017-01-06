@@ -15,10 +15,11 @@ class SearchSceneViewController: BaseViewController {
 
     //MARK: update state
     override func newState(state: AppState) {
-        super.newState(state: state)
         if let searchCriteria = state.property.searchCriteria {
             searchView?.update(searchCriteria: searchCriteria)
         }
+
+        super.newState(state: state)
     }
     
     //MARK: user action
@@ -31,16 +32,6 @@ class SearchSceneViewController: BaseViewController {
     }
 
     //MARK: lifecycle
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        mainStore.subscribe(self) { state in state }
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        mainStore.unsubscribe(self)
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         searchView = SearchView(frame: self.view.bounds)

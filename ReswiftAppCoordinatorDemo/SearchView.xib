@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchView" customModule="ReswiftAppCoordinatorDemo" customModuleProvider="target">
             <connections>
-                <outlet property="errorLabel" destination="nl3-kq-IvA" id="bCQ-3V-4He"/>
                 <outlet property="placeNameField" destination="zZD-RJ-Rrx" id="lC5-iT-0jd"/>
             </connections>
         </placeholder>
@@ -62,13 +61,6 @@
                         <action selector="locationButtonTapped" destination="-2" eventType="touchUpInside" id="K5y-62-Hzx"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nl3-kq-IvA">
-                    <rect key="frame" x="46" y="342" width="285" height="124"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <point key="canvasLocation" x="33.5" y="83.5"/>
