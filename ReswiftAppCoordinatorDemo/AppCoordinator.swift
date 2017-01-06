@@ -16,7 +16,7 @@ class AppCoordinator {
     }
 
     func start() {
-        let searchVC = SearchViewController();
+        let searchVC = SearchSceneViewController();
         self.rootVC.pushViewController(searchVC, animated: true)
     }
 }
