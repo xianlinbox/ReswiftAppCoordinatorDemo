@@ -38,6 +38,7 @@
 		DF74B9E31E1CF3EB0028246C /* PropertyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9E11E1CF3EB0028246C /* PropertyApi.swift */; };
 		DF74B9E51E1CF7420028246C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF74B9E41E1CF7420028246C /* Alamofire.framework */; };
 		DFC26C221E1F404700148AB5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC26C211E1F404700148AB5 /* SearchView.swift */; };
+		DFC26C271E1F6F8A00148AB5 /* LocationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC26C261E1F6F8A00148AB5 /* LocationTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		DF74B9E11E1CF3EB0028246C /* PropertyApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyApi.swift; sourceTree = "<group>"; };
 		DF74B9E41E1CF7420028246C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		DFC26C211E1F404700148AB5 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		DFC26C261E1F6F8A00148AB5 /* LocationTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		DF30726B1E1BA625005AA130 /* ReswiftAppCoordinatorDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DFC26C251E1F6F3500148AB5 /* Sensor */,
 				DF74B9BF1E1C92120028246C /* Themes */,
 				DF74B9C71E1CADE10028246C /* Reducers */,
 				DF74B9C61E1CADBE0028246C /* Actions */,
@@ -218,6 +221,14 @@
 				DF31C0521E1F27360053DB38 /* BaseViewController.swift */,
 			);
 			name = BaseViews;
+			sourceTree = "<group>";
+		};
+		DFC26C251E1F6F3500148AB5 /* Sensor */ = {
+			isa = PBXGroup;
+			children = (
+				DFC26C261E1F6F8A00148AB5 /* LocationTracker.swift */,
+			);
+			name = Sensor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +351,7 @@
 				DF30726F1E1BA625005AA130 /* SearchSceneViewController.swift in Sources */,
 				DF74B9C41E1C92310028246C /* fonts.swift in Sources */,
 				DF30726D1E1BA625005AA130 /* AppDelegate.swift in Sources */,
+				DFC26C271E1F6F8A00148AB5 /* LocationTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

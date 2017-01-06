@@ -16,16 +16,18 @@ class SearchSceneViewController: BaseViewController {
     //MARK: update state
     override func newState(state: AppState) {
         super.newState(state: state)
-
+        if let searchCriteria = state.property.searchCriteria {
+            searchView?.update(searchCriteria: searchCriteria)
+        }
     }
+    
     //MARK: user action
-    @IBAction func searchByCity() {
-        let searchCriteria = SearchCriteria(placeName: "london", centerPoint: nil)
+    func searchByCity(searchCriteria:SearchCriteria) {
         mainStore.dispatch(propertyActionCreater.searchProperties(searchCriteria: searchCriteria))
     }
 
-    @IBAction func searchByCurrentLocation() {
-
+    func searchByCurrentLocation() {
+//        mainStore.dispatch(propertyActionCreater.searchPropertiesByCurrentLocation())
     }
 
     //MARK: lifecycle
@@ -42,14 +44,12 @@ class SearchSceneViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchView = SearchView(frame: self.view.bounds)
+        searchView?.goButtonOnClick = self.searchByCity;
+//        searchView?.locationButtonOnClick = self.searchByCurrentLocation()
         self.view.addSubview(searchView!)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-}
-
-extension SearchSceneViewController {
-
 }
