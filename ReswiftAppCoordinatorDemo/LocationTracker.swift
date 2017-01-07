@@ -8,28 +8,40 @@
 
 import CoreLocation
 
-class LocationTracker:NSObject, CLLocationManagerDelegate {
-    let locationManager = CLLocationManager()
-    var callback: ((String) -> Void)?
-    func getCurrentLocation(_ callback: ((String) -> Void)?){
-        self.callback = callback
+class LocationTracker :NSObject, CLLocationManagerDelegate {
+    var locationManager:CLLocationManager?
+    var onSuccess: ((String) -> Void)?
+    var onFailure: ((String) -> Void)?
+
+    func getCurrentLocation(success: ((String) -> Void)?, fail: ((String) -> Void)?){
+        self.locationManager = CLLocationManager()
+        self.onSuccess = success
+        self.onFailure = fail
         
         // Ask for Authorisation from the User.
-        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager?.requestAlwaysAuthorization()
 
         // For use in foreground
-        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager?.requestWhenInUseAuthorization()
 
         if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
+            locationManager?.delegate = self
+            locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager?.startUpdatingLocation()
         }
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        self.callback?("\(locValue.latitude),\(locValue.longitude)")
-        locationManager.stopUpdatingLocation();
+        self.onSuccess?("\(locValue.latitude),\(locValue.longitude)")
+        self.locationManager?.stopUpdatingLocation()
+        self.locationManager = nil
     }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        self.onFailure?(error.localizedDescription)
+        self.locationManager?.stopUpdatingLocation()
+        self.locationManager = nil
+    }
+
 }

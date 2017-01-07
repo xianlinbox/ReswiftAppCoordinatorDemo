@@ -27,15 +27,15 @@ class SearchSceneViewController: BaseViewController {
     }
 
     func searchByCurrentLocation() {
-//        mainStore.dispatch(propertyActionCreater.searchPropertiesByCurrentLocation())
+        mainStore.dispatch(propertyActionCreater.searchPropertiesByCurrentLocation())
     }
 
     //MARK: lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         searchView = SearchView(frame: self.view.bounds)
-        searchView?.goButtonOnClick = self.searchByCity;
-//        searchView?.locationButtonOnClick = self.searchByCurrentLocation()
+        searchView?.goButtonOnClick = self.searchByCity
+        searchView?.locationButtonOnClick = self.searchByCurrentLocation
         self.view.addSubview(searchView!)
     }
 

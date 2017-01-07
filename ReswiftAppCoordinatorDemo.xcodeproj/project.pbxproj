@@ -39,6 +39,7 @@
 		DF74B9E51E1CF7420028246C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF74B9E41E1CF7420028246C /* Alamofire.framework */; };
 		DFC26C221E1F404700148AB5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC26C211E1F404700148AB5 /* SearchView.swift */; };
 		DFC26C271E1F6F8A00148AB5 /* LocationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC26C261E1F6F8A00148AB5 /* LocationTracker.swift */; };
+		DFF15E401E212BDC0072DACF /* LocationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC26C261E1F6F8A00148AB5 /* LocationTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -366,6 +367,7 @@
 				DF74B9DC1E1CE2F70028246C /* LoadingActions.swift in Sources */,
 				DF74B9C21E1C92230028246C /* colors.swift in Sources */,
 				DF3072821E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift in Sources */,
+				DFF15E401E212BDC0072DACF /* LocationTracker.swift in Sources */,
 				DF74B9D31E1CCB590028246C /* PropertyActions.swift in Sources */,
 				DF74B9DF1E1CE3630028246C /* ErrorMessageActions.swift in Sources */,
 				DF74B9D91E1CDF680028246C /* AppReducer.swift in Sources */,
