@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF23DFCF1E220EDB0032641D /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF23DFCE1E220EDB0032641D /* Alamofire.framework */; };
+		DF23DFD61E220F250032641D /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF23DFD41E220F250032641D /* Nimble.framework */; };
+		DF23DFD71E220F250032641D /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF23DFD51E220F250032641D /* Quick.framework */; };
 		DF30726D1E1BA625005AA130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30726C1E1BA625005AA130 /* AppDelegate.swift */; };
 		DF30726F1E1BA625005AA130 /* SearchSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30726E1E1BA625005AA130 /* SearchSceneViewController.swift */; };
 		DF3072741E1BA625005AA130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF3072731E1BA625005AA130 /* Assets.xcassets */; };
@@ -59,6 +62,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				DF23DFD61E220F250032641D /* Nimble.framework in CopyFiles */,
+				DF23DFD71E220F250032641D /* Quick.framework in CopyFiles */,
+				DF23DFCF1E220EDB0032641D /* Alamofire.framework in CopyFiles */,
 				DF74B9B41E1C8F130028246C /* ReSwift.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +72,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DF23DFCE1E220EDB0032641D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		DF23DFD41E220F250032641D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		DF23DFD51E220F250032641D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		DF3072691E1BA625005AA130 /* ReswiftAppCoordinatorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReswiftAppCoordinatorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF30726C1E1BA625005AA130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF30726E1E1BA625005AA130 /* SearchSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSceneViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +125,9 @@
 		DF3072601E1BA625005AA130 = {
 			isa = PBXGroup;
 			children = (
+				DF23DFD41E220F250032641D /* Nimble.framework */,
+				DF23DFD51E220F250032641D /* Quick.framework */,
+				DF23DFCE1E220EDB0032641D /* Alamofire.framework */,
 				DF30726B1E1BA625005AA130 /* ReswiftAppCoordinatorDemo */,
 				DF3072801E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests */,
 				DF30726A1E1BA625005AA130 /* Products */,
