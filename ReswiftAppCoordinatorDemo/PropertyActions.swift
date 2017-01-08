@@ -13,7 +13,7 @@ struct UpdateSearchCriteria: Action {
 }
 
 struct UpdateProperties: Action {
-    let properties:String
+    let response:Any
 }
 
 struct PropertyActionCreater {
@@ -28,7 +28,8 @@ struct PropertyActionCreater {
 
             self.propertyApi.findProperties(
                 searchCriteria: searchCriteria,
-                success: { (data) in
+                success: { (response) in
+                    store.dispatch(UpdateProperties(response: response))
                     store.dispatch(EndLoading())
             },
                 failure: { (error) in

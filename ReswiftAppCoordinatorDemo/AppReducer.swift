@@ -52,8 +52,20 @@ struct AppReducer: Reducer {
         switch action {
         case let action as UpdateSearchCriteria:
             state.searchCriteria = action.searchCriteria
-        case _ as UpdateProperties:
-            state.properties = []
+        case let action as UpdateProperties:
+            let responseData = action.response as! NSDictionary
+            let response = responseData.object(forKey: "response") as! NSDictionary
+            let propertyList = response.object(forKey: "listings") as! NSArray
+
+            state.properties = propertyList.map({ (property) -> PropertyDetail in
+                let props = property as! NSDictionary
+
+                return PropertyDetail(
+                    title:props.object(forKey: "title") as! String,
+                    price:props.object(forKey: "price") as! Double,
+                    imgUrl:props.object(forKey: "img_url") as! String
+                )
+            })
         default:
             break
         }
