@@ -7,9 +7,26 @@
 //
 
 class PropertyDetailSceneViewController: BaseViewController {
+    var propertyDetailView:PropertyDetailView?
+
+
     //MARK: update state
     override func newState(state: AppState) {
+        if let property = state.property.properties?[state.property.selectedProperty] {
+            self.propertyDetailView?.update(property: property)
+        }
+
         super.newState(state: state)
     }
 
+    //MARK: lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        propertyDetailView = PropertyDetailView(frame: self.view.bounds)
+        self.view.addSubview(propertyDetailView!)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 }

@@ -37,12 +37,7 @@ extension SearchResultView:  UITableViewDelegate, UITableViewDataSource {
 
         if let property = self.properties?[indexPath.row] {
             cell?.textLabel?.text = property.title
-            cell?.detailTextLabel?.text = String(property.price)
-//            if let url  = URL(string: property.imgUrl), let data = NSData(contentsOf: url)
-//            {
-//                let image = UIImage(data: data as Data)
-//                cell?.imageView?.image =  UIImage(data: data as Data)
-//            }
+            cell?.detailTextLabel?.text = StringUtil.formatForPound(property.price)
         }
 
         return cell!

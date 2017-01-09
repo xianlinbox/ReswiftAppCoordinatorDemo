@@ -63,7 +63,11 @@ struct AppReducer: Reducer {
                 return PropertyDetail(
                     title:props.object(forKey: "title") as! String,
                     price:props.object(forKey: "price") as! Double,
-                    imgUrl:props.object(forKey: "img_url") as! String
+                    imgUrl:props.object(forKey: "img_url") as! String,
+                    bedroomNumber: Int((props.object(forKey: "bedroom_number") as? Int64) ?? -1),
+                    propertyType: props.object(forKey: "property_type") as! String,
+                    bathroomNumber: Int((props.object(forKey: "bathroom_number") as? Int64) ?? -1),
+                    description:props.object(forKey: "summary") as! String
                 )
             })
         case let action as UpdateSelectedProperty:

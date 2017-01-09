@@ -10,7 +10,9 @@
 		DF0E3FB01E2369BA00D00586 /* PropertyDetailSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E3FAF1E2369BA00D00586 /* PropertyDetailSceneViewController.swift */; };
 		DF0E3FB21E236C0400D00586 /* PropertyDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0E3FB11E236C0400D00586 /* PropertyDetailView.xib */; };
 		DF0E3FB41E236C1900D00586 /* PropertyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E3FB31E236C1900D00586 /* PropertyDetailView.swift */; };
-		DF0E3FB71E2378AF00D00586 /* StringUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E3FB61E2378AF00D00586 /* StringUtility.swift */; };
+		DF0E3FB71E2378AF00D00586 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E3FB61E2378AF00D00586 /* StringUtil.swift */; };
+		DF0E3FBA1E237C9F00D00586 /* StringUtilSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E3FB91E237C9F00D00586 /* StringUtilSpec.swift */; };
+		DF0E3FBB1E237E5900D00586 /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E3FB61E2378AF00D00586 /* StringUtil.swift */; };
 		DF23DFCF1E220EDB0032641D /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF23DFCE1E220EDB0032641D /* Alamofire.framework */; };
 		DF23DFD61E220F250032641D /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF23DFD41E220F250032641D /* Nimble.framework */; };
 		DF23DFD71E220F250032641D /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF23DFD51E220F250032641D /* Quick.framework */; };
@@ -23,7 +25,6 @@
 		DF30726F1E1BA625005AA130 /* SearchSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30726E1E1BA625005AA130 /* SearchSceneViewController.swift */; };
 		DF3072741E1BA625005AA130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF3072731E1BA625005AA130 /* Assets.xcassets */; };
 		DF3072771E1BA625005AA130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3072751E1BA625005AA130 /* LaunchScreen.storyboard */; };
-		DF3072821E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3072811E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift */; };
 		DF3072901E1BE7D5005AA130 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30728F1E1BE7D5005AA130 /* AppCoordinator.swift */; };
 		DF31C0531E1F27360053DB38 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF31C0521E1F27360053DB38 /* BaseViewController.swift */; };
 		DF74B9B21E1C8EAB0028246C /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF30728D1E1BB2EA005AA130 /* ReSwift.framework */; };
@@ -84,7 +85,8 @@
 		DF0E3FAF1E2369BA00D00586 /* PropertyDetailSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyDetailSceneViewController.swift; sourceTree = "<group>"; };
 		DF0E3FB11E236C0400D00586 /* PropertyDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PropertyDetailView.xib; sourceTree = "<group>"; };
 		DF0E3FB31E236C1900D00586 /* PropertyDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyDetailView.swift; sourceTree = "<group>"; };
-		DF0E3FB61E2378AF00D00586 /* StringUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtility.swift; sourceTree = "<group>"; };
+		DF0E3FB61E2378AF00D00586 /* StringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
+		DF0E3FB91E237C9F00D00586 /* StringUtilSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtilSpec.swift; sourceTree = "<group>"; };
 		DF23DFCE1E220EDB0032641D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		DF23DFD41E220F250032641D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		DF23DFD51E220F250032641D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -100,7 +102,6 @@
 		DF3072761E1BA625005AA130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF3072781E1BA625005AA130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF30727D1E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReswiftAppCoordinatorDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF3072811E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReswiftAppCoordinatorDemoTests.swift; sourceTree = "<group>"; };
 		DF3072831E1BA625005AA130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF30728D1E1BB2EA005AA130 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		DF30728F1E1BE7D5005AA130 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -143,7 +144,15 @@
 		DF0E3FB51E23789F00D00586 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				DF0E3FB61E2378AF00D00586 /* StringUtility.swift */,
+				DF0E3FB61E2378AF00D00586 /* StringUtil.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		DF0E3FB81E237C8400D00586 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DF0E3FB91E237C9F00D00586 /* StringUtilSpec.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -193,7 +202,7 @@
 		DF3072801E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				DF3072811E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift */,
+				DF0E3FB81E237C8400D00586 /* Utilities */,
 				DF3072831E1BA625005AA130 /* Info.plist */,
 			);
 			path = ReswiftAppCoordinatorDemoTests;
@@ -408,7 +417,7 @@
 				DF23DFD91E2211A70032641D /* SearchResultViewController.swift in Sources */,
 				DFC26C271E1F6F8A00148AB5 /* LocationTracker.swift in Sources */,
 				DF0E3FB01E2369BA00D00586 /* PropertyDetailSceneViewController.swift in Sources */,
-				DF0E3FB71E2378AF00D00586 /* StringUtility.swift in Sources */,
+				DF0E3FB71E2378AF00D00586 /* StringUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,14 +425,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0E3FBA1E237C9F00D00586 /* StringUtilSpec.swift in Sources */,
 				DF74B9C51E1C92310028246C /* fonts.swift in Sources */,
 				DF74B9E31E1CF3EB0028246C /* PropertyApi.swift in Sources */,
 				DF74B9CA1E1CAF660028246C /* AppState.swift in Sources */,
 				DF74B9BE1E1C91F00028246C /* XibBaseView.swift in Sources */,
 				DF74B9DC1E1CE2F70028246C /* LoadingActions.swift in Sources */,
 				DF74B9C21E1C92230028246C /* colors.swift in Sources */,
-				DF3072821E1BA625005AA130 /* ReswiftAppCoordinatorDemoTests.swift in Sources */,
 				DFF15E401E212BDC0072DACF /* LocationTracker.swift in Sources */,
+				DF0E3FBB1E237E5900D00586 /* StringUtil.swift in Sources */,
 				DF74B9D31E1CCB590028246C /* PropertyActions.swift in Sources */,
 				DF74B9DF1E1CE3630028246C /* ErrorMessageActions.swift in Sources */,
 				DF74B9D91E1CDF680028246C /* AppReducer.swift in Sources */,

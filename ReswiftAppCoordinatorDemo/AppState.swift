@@ -28,5 +28,9 @@ struct PropertyDetail {
     var title:String
     var price:Double
     var imgUrl:String
+    var bedroomNumber:Int = -1
+    var propertyType:String
+    var bathroomNumber:Int = -1
+    var description:String
 }
 
