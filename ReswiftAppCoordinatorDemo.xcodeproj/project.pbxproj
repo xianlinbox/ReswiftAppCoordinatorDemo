@@ -19,8 +19,6 @@
 		DF23DFD91E2211A70032641D /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF23DFD81E2211A70032641D /* SearchResultViewController.swift */; };
 		DF23DFDB1E2218990032641D /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF23DFDA1E2218990032641D /* SearchResultView.swift */; };
 		DF23DFDD1E2219B10032641D /* SearchResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF23DFDC1E2219B10032641D /* SearchResultView.xib */; };
-		DF23DFDF1E2279E80032641D /* SearchResultItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF23DFDE1E2279E80032641D /* SearchResultItemCell.xib */; };
-		DF23DFE11E2279F60032641D /* SearchResultItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF23DFE01E2279F60032641D /* SearchResultItemCell.swift */; };
 		DF30726D1E1BA625005AA130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30726C1E1BA625005AA130 /* AppDelegate.swift */; };
 		DF30726F1E1BA625005AA130 /* SearchSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF30726E1E1BA625005AA130 /* SearchSceneViewController.swift */; };
 		DF3072741E1BA625005AA130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF3072731E1BA625005AA130 /* Assets.xcassets */; };
@@ -93,8 +91,6 @@
 		DF23DFD81E2211A70032641D /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		DF23DFDA1E2218990032641D /* SearchResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
 		DF23DFDC1E2219B10032641D /* SearchResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultView.xib; sourceTree = "<group>"; };
-		DF23DFDE1E2279E80032641D /* SearchResultItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultItemCell.xib; sourceTree = "<group>"; };
-		DF23DFE01E2279F60032641D /* SearchResultItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultItemCell.swift; sourceTree = "<group>"; };
 		DF3072691E1BA625005AA130 /* ReswiftAppCoordinatorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReswiftAppCoordinatorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF30726C1E1BA625005AA130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF30726E1E1BA625005AA130 /* SearchSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSceneViewController.swift; sourceTree = "<group>"; };
@@ -227,8 +223,6 @@
 				DF23DFD81E2211A70032641D /* SearchResultViewController.swift */,
 				DF23DFDA1E2218990032641D /* SearchResultView.swift */,
 				DF23DFDC1E2219B10032641D /* SearchResultView.xib */,
-				DF23DFE01E2279F60032641D /* SearchResultItemCell.swift */,
-				DF23DFDE1E2279E80032641D /* SearchResultItemCell.xib */,
 				DF0E3FAF1E2369BA00D00586 /* PropertyDetailSceneViewController.swift */,
 				DF0E3FB31E236C1900D00586 /* PropertyDetailView.swift */,
 				DF0E3FB11E236C0400D00586 /* PropertyDetailView.xib */,
@@ -378,7 +372,6 @@
 				DF74B9B71E1C906A0028246C /* SearchView.xib in Resources */,
 				DF3072771E1BA625005AA130 /* LaunchScreen.storyboard in Resources */,
 				DF3072741E1BA625005AA130 /* Assets.xcassets in Resources */,
-				DF23DFDF1E2279E80032641D /* SearchResultItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +393,6 @@
 				DF31C0531E1F27360053DB38 /* BaseViewController.swift in Sources */,
 				DF74B9BD1E1C91F00028246C /* XibBaseView.swift in Sources */,
 				DF74B9D21E1CCB590028246C /* PropertyActions.swift in Sources */,
-				DF23DFE11E2279F60032641D /* SearchResultItemCell.swift in Sources */,
 				DF74B9C11E1C92230028246C /* colors.swift in Sources */,
 				DF74B9D81E1CDF680028246C /* AppReducer.swift in Sources */,
 				DF74B9DE1E1CE3630028246C /* ErrorMessageActions.swift in Sources */,
