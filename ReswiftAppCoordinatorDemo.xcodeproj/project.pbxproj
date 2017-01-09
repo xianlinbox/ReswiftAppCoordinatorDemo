@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DF0E3FB01E2369BA00D00586 /* PropertyDetailSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E3FAF1E2369BA00D00586 /* PropertyDetailSceneViewController.swift */; };
+		DF0E3FB21E236C0400D00586 /* PropertyDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF0E3FB11E236C0400D00586 /* PropertyDetailView.xib */; };
+		DF0E3FB41E236C1900D00586 /* PropertyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E3FB31E236C1900D00586 /* PropertyDetailView.swift */; };
+		DF0E3FB71E2378AF00D00586 /* StringUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E3FB61E2378AF00D00586 /* StringUtility.swift */; };
 		DF23DFCF1E220EDB0032641D /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF23DFCE1E220EDB0032641D /* Alamofire.framework */; };
 		DF23DFD61E220F250032641D /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF23DFD41E220F250032641D /* Nimble.framework */; };
 		DF23DFD71E220F250032641D /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF23DFD51E220F250032641D /* Quick.framework */; };
@@ -79,6 +82,9 @@
 
 /* Begin PBXFileReference section */
 		DF0E3FAF1E2369BA00D00586 /* PropertyDetailSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyDetailSceneViewController.swift; sourceTree = "<group>"; };
+		DF0E3FB11E236C0400D00586 /* PropertyDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PropertyDetailView.xib; sourceTree = "<group>"; };
+		DF0E3FB31E236C1900D00586 /* PropertyDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyDetailView.swift; sourceTree = "<group>"; };
+		DF0E3FB61E2378AF00D00586 /* StringUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtility.swift; sourceTree = "<group>"; };
 		DF23DFCE1E220EDB0032641D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		DF23DFD41E220F250032641D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		DF23DFD51E220F250032641D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -134,6 +140,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF0E3FB51E23789F00D00586 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DF0E3FB61E2378AF00D00586 /* StringUtility.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		DF3072601E1BA625005AA130 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +173,7 @@
 		DF30726B1E1BA625005AA130 /* ReswiftAppCoordinatorDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DF0E3FB51E23789F00D00586 /* Utilities */,
 				DFC26C251E1F6F3500148AB5 /* Sensor */,
 				DF74B9BF1E1C92120028246C /* Themes */,
 				DF74B9C71E1CADE10028246C /* Reducers */,
@@ -206,6 +221,8 @@
 				DF23DFE01E2279F60032641D /* SearchResultItemCell.swift */,
 				DF23DFDE1E2279E80032641D /* SearchResultItemCell.xib */,
 				DF0E3FAF1E2369BA00D00586 /* PropertyDetailSceneViewController.swift */,
+				DF0E3FB31E236C1900D00586 /* PropertyDetailView.swift */,
+				DF0E3FB11E236C0400D00586 /* PropertyDetailView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -347,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF0E3FB21E236C0400D00586 /* PropertyDetailView.xib in Resources */,
 				DF23DFDD1E2219B10032641D /* SearchResultView.xib in Resources */,
 				DF74B9B71E1C906A0028246C /* SearchView.xib in Resources */,
 				DF3072771E1BA625005AA130 /* LaunchScreen.storyboard in Resources */,
@@ -384,11 +402,13 @@
 				DFC26C221E1F404700148AB5 /* SearchView.swift in Sources */,
 				DF30726F1E1BA625005AA130 /* SearchSceneViewController.swift in Sources */,
 				DF23DFDB1E2218990032641D /* SearchResultView.swift in Sources */,
+				DF0E3FB41E236C1900D00586 /* PropertyDetailView.swift in Sources */,
 				DF74B9C41E1C92310028246C /* fonts.swift in Sources */,
 				DF30726D1E1BA625005AA130 /* AppDelegate.swift in Sources */,
 				DF23DFD91E2211A70032641D /* SearchResultViewController.swift in Sources */,
 				DFC26C271E1F6F8A00148AB5 /* LocationTracker.swift in Sources */,
 				DF0E3FB01E2369BA00D00586 /* PropertyDetailSceneViewController.swift in Sources */,
+				DF0E3FB71E2378AF00D00586 /* StringUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
