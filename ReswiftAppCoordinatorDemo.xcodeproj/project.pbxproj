@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF0E3FB01E2369BA00D00586 /* PropertyDetailSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0E3FAF1E2369BA00D00586 /* PropertyDetailSceneViewController.swift */; };
 		DF23DFCF1E220EDB0032641D /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF23DFCE1E220EDB0032641D /* Alamofire.framework */; };
 		DF23DFD61E220F250032641D /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF23DFD41E220F250032641D /* Nimble.framework */; };
 		DF23DFD71E220F250032641D /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF23DFD51E220F250032641D /* Quick.framework */; };
@@ -77,6 +78,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DF0E3FAF1E2369BA00D00586 /* PropertyDetailSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyDetailSceneViewController.swift; sourceTree = "<group>"; };
 		DF23DFCE1E220EDB0032641D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		DF23DFD41E220F250032641D /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		DF23DFD51E220F250032641D /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				DF23DFDC1E2219B10032641D /* SearchResultView.xib */,
 				DF23DFE01E2279F60032641D /* SearchResultItemCell.swift */,
 				DF23DFDE1E2279E80032641D /* SearchResultItemCell.xib */,
+				DF0E3FAF1E2369BA00D00586 /* PropertyDetailSceneViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				DF30726D1E1BA625005AA130 /* AppDelegate.swift in Sources */,
 				DF23DFD91E2211A70032641D /* SearchResultViewController.swift in Sources */,
 				DFC26C271E1F6F8A00148AB5 /* LocationTracker.swift in Sources */,
+				DF0E3FB01E2369BA00D00586 /* PropertyDetailSceneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

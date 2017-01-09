@@ -23,7 +23,11 @@ class SearchSceneViewController: BaseViewController {
     
     //MARK: user action
     func searchByCity(searchCriteria:SearchCriteria) {
-        mainStore.dispatch(propertyActionCreater.searchProperties(searchCriteria: searchCriteria))
+        mainStore.dispatch(
+            propertyActionCreater.searchProperties(searchCriteria: searchCriteria){
+                self.appCoordinator?.showSearchResults()
+            }
+        )
     }
 
     func searchByCurrentLocation() {

@@ -66,6 +66,8 @@ struct AppReducer: Reducer {
                     imgUrl:props.object(forKey: "img_url") as! String
                 )
             })
+        case let action as UpdateSelectedProperty:
+            state.selectedProperty = action.selectedPropertyIndex
         default:
             break
         }

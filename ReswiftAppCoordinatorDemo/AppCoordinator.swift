@@ -30,6 +30,14 @@ class AppCoordinator {
 
 extension AppCoordinator {
     func showSearchResults() {
-        
+        let searchResultVC = SearchResultSceneViewController();
+        searchResultVC.appCoordinator = self
+        self.rootVC.pushViewController(searchResultVC, animated: true)
+    }
+
+    func showPropertyDetail() {
+        let propertyDetailVC = PropertyDetailSceneViewController();
+        propertyDetailVC.appCoordinator = self
+        self.rootVC.pushViewController(propertyDetailVC, animated: true)
     }
 }

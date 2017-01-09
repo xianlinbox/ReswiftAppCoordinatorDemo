@@ -16,13 +16,17 @@ struct UpdateProperties: Action {
     let response:Any
 }
 
+struct UpdateSelectedProperty: Action {
+    let selectedPropertyIndex:Int
+}
+
 struct PropertyActionCreater {
     typealias ActionCreator = (_ state: AppState, _ store: Store<AppState>) -> Action?
     typealias AsyncActionCreator = (_ state: AppState, _ store: Store<AppState>,  _ callback:  @escaping (_ actionCreator: ActionCreator) -> Void ) -> Void
     let propertyApi = PropertyApi()
     let locationTracker = LocationTracker()
 
-    func searchProperties(searchCriteria: SearchCriteria) -> ActionCreator {
+    func searchProperties(searchCriteria: SearchCriteria, _ callback:(() -> Void)?) -> ActionCreator {
         return { state, store in
             store.dispatch(UpdateSearchCriteria(searchCriteria: searchCriteria))
 
@@ -31,6 +35,7 @@ struct PropertyActionCreater {
                 success: { (response) in
                     store.dispatch(UpdateProperties(response: response))
                     store.dispatch(EndLoading())
+                    callback?()
             },
                 failure: { (error) in
                     store.dispatch(EndLoading())
@@ -52,7 +57,7 @@ struct PropertyActionCreater {
                         placeName:nil,
                         centerPoint: currentLocation
                     )
-                    callback(self.searchProperties(searchCriteria: searchCriteria))
+                    callback(self.searchProperties(searchCriteria: searchCriteria, nil))
                     },
                 fail: { errorMessage in
                         store.dispatch(SaveErrorMessage(errorMessage: errorMessage))

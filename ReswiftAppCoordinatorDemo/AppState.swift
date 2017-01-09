@@ -16,6 +16,7 @@ struct AppState: StateType {
 struct PropertyState {
     var searchCriteria:SearchCriteria?
     var properties:[PropertyDetail]?
+    var selectedProperty:Int = -1
 }
 
 struct SearchCriteria {
