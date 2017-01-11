@@ -25,6 +25,7 @@ class BaseViewController: UIViewController, StoreSubscriber {
 
         if let errorMessage = state.errorMessage, !errorMessage.isEmpty {
             self.appCoordinator?.showAlert(errorMessage: errorMessage)
+            mainStore.dispatch(SaveErrorMessage(errorMessage: ""))
         }
     }
 

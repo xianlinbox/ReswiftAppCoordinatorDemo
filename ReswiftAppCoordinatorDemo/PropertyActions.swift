@@ -61,6 +61,7 @@ struct PropertyActionCreater {
                     },
                 fail: { errorMessage in
                         store.dispatch(SaveErrorMessage(errorMessage: errorMessage))
+                        store.dispatch(EndLoading())
                     }
             )
         }

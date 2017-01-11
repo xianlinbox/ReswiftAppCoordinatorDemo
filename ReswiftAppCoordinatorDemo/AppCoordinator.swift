@@ -23,18 +23,28 @@ class AppCoordinator {
 
     func showAlert(errorMessage:String) {
         let alert = UIAlertController(title: "Oops!", message:errorMessage, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
         self.rootVC.topViewController?.present(alert, animated: true)
     }
 }
 
-extension AppCoordinator {
+protocol SearchSceneCoordinator {
+    func showSearchResults()
+}
+
+extension AppCoordinator:SearchSceneCoordinator {
     func showSearchResults() {
         let searchResultVC = SearchResultSceneViewController();
         searchResultVC.appCoordinator = self
         self.rootVC.pushViewController(searchResultVC, animated: true)
     }
+}
 
+protocol SearchResultsSceneCoordinator {
+    func showPropertyDetail()
+}
+
+extension AppCoordinator:SearchResultsSceneCoordinator {
     func showPropertyDetail() {
         let propertyDetailVC = PropertyDetailSceneViewController();
         propertyDetailVC.appCoordinator = self
