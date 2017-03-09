@@ -10,7 +10,7 @@ import ReSwift
 
 class SearchSceneViewController: BaseViewController {
 
-    var searchSceneCoordinator:SearchSceneCoordinator?
+    var searchSceneCoordinator:SearchSceneCoordinatorProtocol?
     var searchView:SearchView?
 
     //MARK: update state
@@ -34,7 +34,6 @@ class SearchSceneViewController: BaseViewController {
     //MARK: lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchSceneCoordinator = SearchSceneCoordinator(rootVC:self.navigationController!);
         searchView = SearchView(frame: self.view.bounds)
         searchView?.goButtonOnClick = self.searchByCity
         searchView?.locationButtonOnClick = self.searchByCurrentLocation

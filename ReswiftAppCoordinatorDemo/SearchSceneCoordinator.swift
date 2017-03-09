@@ -20,7 +20,8 @@ class SearchSceneCoordinator: AppCoordinator, SearchSceneCoordinatorProtocol {
         mainStore.dispatch(
             propertyActionCreater.searchProperties(searchCriteria: searchCriteria){
                 let searchResultVC = SearchResultSceneViewController();
-                //                searchResultVC.appCoordinator = self
+                let searchResultCoordinator = SearchResultsSceneCoordinator(self.rootVC)
+                searchResultVC.searchResultCoordinator = searchResultCoordinator
                 self.rootVC.pushViewController(searchResultVC, animated: true)
             }
         )

@@ -49,6 +49,7 @@
 		DF74B9E31E1CF3EB0028246C /* PropertyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9E11E1CF3EB0028246C /* PropertyApi.swift */; };
 		DF74B9E51E1CF7420028246C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF74B9E41E1CF7420028246C /* Alamofire.framework */; };
 		DFC1E6A11E714CFF00AB419F /* SearchSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1E6A01E714CFF00AB419F /* SearchSceneCoordinator.swift */; };
+		DFC1E6A31E714EA200AB419F /* SearchResultsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1E6A21E714EA200AB419F /* SearchResultsCoordinator.swift */; };
 		DFC26C221E1F404700148AB5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC26C211E1F404700148AB5 /* SearchView.swift */; };
 		DFC26C271E1F6F8A00148AB5 /* LocationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC26C261E1F6F8A00148AB5 /* LocationTracker.swift */; };
 		DFF15E401E212BDC0072DACF /* LocationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC26C261E1F6F8A00148AB5 /* LocationTracker.swift */; };
@@ -115,6 +116,7 @@
 		DF74B9E11E1CF3EB0028246C /* PropertyApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyApi.swift; sourceTree = "<group>"; };
 		DF74B9E41E1CF7420028246C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		DFC1E6A01E714CFF00AB419F /* SearchSceneCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSceneCoordinator.swift; sourceTree = "<group>"; };
+		DFC1E6A21E714EA200AB419F /* SearchResultsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsCoordinator.swift; sourceTree = "<group>"; };
 		DFC26C211E1F404700148AB5 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		DFC26C261E1F6F8A00148AB5 /* LocationTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -272,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				DFC1E6A01E714CFF00AB419F /* SearchSceneCoordinator.swift */,
+				DFC1E6A21E714EA200AB419F /* SearchResultsCoordinator.swift */,
 			);
 			name = Coordinators;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				DFC1E6A11E714CFF00AB419F /* SearchSceneCoordinator.swift in Sources */,
 				DF74B9DB1E1CE2F70028246C /* LoadingActions.swift in Sources */,
 				DF74B9C91E1CAF660028246C /* AppState.swift in Sources */,
+				DFC1E6A31E714EA200AB419F /* SearchResultsCoordinator.swift in Sources */,
 				DF74B9E21E1CF3EB0028246C /* PropertyApi.swift in Sources */,
 				DF3072901E1BE7D5005AA130 /* AppCoordinator.swift in Sources */,
 				DFC26C221E1F404700148AB5 /* SearchView.swift in Sources */,

@@ -11,13 +11,14 @@ import UIKit
 class AppCoordinator {
     var rootVC: UINavigationController
 
-    init(rootVC: UINavigationController){
+    init(_ rootVC: UINavigationController){
         self.rootVC = rootVC
     }
 
     func start() {
         let searchVC = SearchSceneViewController();
-        searchVC.appCoordinator = self
+        let searchSceneCoordinator = SearchSceneCoordinator(self.rootVC)
+        searchVC.searchSceneCoordinator = searchSceneCoordinator
         self.rootVC.pushViewController(searchVC, animated: true)
     }
 
@@ -25,18 +26,5 @@ class AppCoordinator {
         let alert = UIAlertController(title: "Oops!", message:errorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         self.rootVC.topViewController?.present(alert, animated: true)
-    }
-}
-
-
-protocol SearchResultsSceneCoordinator {
-    func showPropertyDetail()
-}
-
-extension AppCoordinator:SearchResultsSceneCoordinator {
-    func showPropertyDetail() {
-        let propertyDetailVC = PropertyDetailSceneViewController();
-        propertyDetailVC.appCoordinator = self
-        self.rootVC.pushViewController(propertyDetailVC, animated: true)
     }
 }

@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         let rootVC = UINavigationController()
         window?.rootViewController = rootVC
-        appCoordinator = AppCoordinator(rootVC: rootVC)
+        appCoordinator = AppCoordinator(rootVC)
         appCoordinator.start()
         window?.makeKeyAndVisible()
         return true

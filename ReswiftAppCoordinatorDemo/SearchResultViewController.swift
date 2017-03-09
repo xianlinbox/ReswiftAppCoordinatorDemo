@@ -10,7 +10,7 @@ import UIKit
 
 class SearchResultSceneViewController: BaseViewController {
 
-    let propertyActionCreater = PropertyActionCreater()
+    var searchResultCoordinator: SearchResultsSceneCoordinatorProtocol?
     var searchResultView:SearchResultView?
 
     //MARK: update state
@@ -23,8 +23,7 @@ class SearchResultSceneViewController: BaseViewController {
 
     //MARK: user action
     func showPropertyDetail(index:Int) {
-        mainStore.dispatch(UpdateSelectedProperty(selectedPropertyIndex: index))
-        self.appCoordinator?.showPropertyDetail()
+        self.searchResultCoordinator?.showPropertyDetail(index: index)
     }
 
     //MARK: lifecycle
