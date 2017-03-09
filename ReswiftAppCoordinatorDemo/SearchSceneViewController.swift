@@ -10,11 +10,12 @@ import ReSwift
 
 class SearchSceneViewController: BaseViewController {
 
-    let propertyActionCreater = PropertyActionCreater()
+    var searchSceneCoordinator:SearchSceneCoordinator?
     var searchView:SearchView?
 
     //MARK: update state
     override func newState(state: AppState) {
+    
         if let searchCriteria = state.property.searchCriteria {
             searchView?.update(searchCriteria: searchCriteria)
         }
@@ -23,20 +24,17 @@ class SearchSceneViewController: BaseViewController {
     
     //MARK: user action
     func searchByCity(searchCriteria:SearchCriteria) {
-        mainStore.dispatch(
-            propertyActionCreater.searchProperties(searchCriteria: searchCriteria){
-                self.appCoordinator?.showSearchResults()
-            }
-        )
+        searchSceneCoordinator?.searchByCity(searchCriteria: searchCriteria)
     }
 
     func searchByCurrentLocation() {
-        mainStore.dispatch(propertyActionCreater.searchPropertiesByCurrentLocation())
+        searchSceneCoordinator?.searchByCurrentLocation()
     }
 
     //MARK: lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchSceneCoordinator = SearchSceneCoordinator(rootVC:self.navigationController!);
         searchView = SearchView(frame: self.view.bounds)
         searchView?.goButtonOnClick = self.searchByCity
         searchView?.locationButtonOnClick = self.searchByCurrentLocation

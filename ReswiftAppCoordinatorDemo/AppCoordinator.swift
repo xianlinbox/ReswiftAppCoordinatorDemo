@@ -28,17 +28,6 @@ class AppCoordinator {
     }
 }
 
-protocol SearchSceneCoordinator {
-    func showSearchResults()
-}
-
-extension AppCoordinator:SearchSceneCoordinator {
-    func showSearchResults() {
-        let searchResultVC = SearchResultSceneViewController();
-        searchResultVC.appCoordinator = self
-        self.rootVC.pushViewController(searchResultVC, animated: true)
-    }
-}
 
 protocol SearchResultsSceneCoordinator {
     func showPropertyDetail()

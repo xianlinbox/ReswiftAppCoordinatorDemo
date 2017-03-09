@@ -48,6 +48,7 @@
 		DF74B9E21E1CF3EB0028246C /* PropertyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9E11E1CF3EB0028246C /* PropertyApi.swift */; };
 		DF74B9E31E1CF3EB0028246C /* PropertyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF74B9E11E1CF3EB0028246C /* PropertyApi.swift */; };
 		DF74B9E51E1CF7420028246C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF74B9E41E1CF7420028246C /* Alamofire.framework */; };
+		DFC1E6A11E714CFF00AB419F /* SearchSceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC1E6A01E714CFF00AB419F /* SearchSceneCoordinator.swift */; };
 		DFC26C221E1F404700148AB5 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC26C211E1F404700148AB5 /* SearchView.swift */; };
 		DFC26C271E1F6F8A00148AB5 /* LocationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC26C261E1F6F8A00148AB5 /* LocationTracker.swift */; };
 		DFF15E401E212BDC0072DACF /* LocationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC26C261E1F6F8A00148AB5 /* LocationTracker.swift */; };
@@ -113,6 +114,7 @@
 		DF74B9DD1E1CE3630028246C /* ErrorMessageActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessageActions.swift; sourceTree = "<group>"; };
 		DF74B9E11E1CF3EB0028246C /* PropertyApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyApi.swift; sourceTree = "<group>"; };
 		DF74B9E41E1CF7420028246C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		DFC1E6A01E714CFF00AB419F /* SearchSceneCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSceneCoordinator.swift; sourceTree = "<group>"; };
 		DFC26C211E1F404700148AB5 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		DFC26C261E1F6F8A00148AB5 /* LocationTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +180,7 @@
 		DF30726B1E1BA625005AA130 /* ReswiftAppCoordinatorDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DFC1E69F1E714CE000AB419F /* Coordinators */,
 				DF0E3FB51E23789F00D00586 /* Utilities */,
 				DFC26C251E1F6F3500148AB5 /* Sensor */,
 				DF74B9BF1E1C92120028246C /* Themes */,
@@ -263,6 +266,14 @@
 				DF74B9E11E1CF3EB0028246C /* PropertyApi.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		DFC1E69F1E714CE000AB419F /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				DFC1E6A01E714CFF00AB419F /* SearchSceneCoordinator.swift */,
+			);
+			name = Coordinators;
 			sourceTree = "<group>";
 		};
 		DFC26C241E1F406400148AB5 /* BaseViews */ = {
@@ -396,6 +407,7 @@
 				DF74B9C11E1C92230028246C /* colors.swift in Sources */,
 				DF74B9D81E1CDF680028246C /* AppReducer.swift in Sources */,
 				DF74B9DE1E1CE3630028246C /* ErrorMessageActions.swift in Sources */,
+				DFC1E6A11E714CFF00AB419F /* SearchSceneCoordinator.swift in Sources */,
 				DF74B9DB1E1CE2F70028246C /* LoadingActions.swift in Sources */,
 				DF74B9C91E1CAF660028246C /* AppState.swift in Sources */,
 				DF74B9E21E1CF3EB0028246C /* PropertyApi.swift in Sources */,
