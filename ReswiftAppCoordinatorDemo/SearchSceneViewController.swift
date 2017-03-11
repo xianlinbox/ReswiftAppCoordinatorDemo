@@ -15,11 +15,17 @@ class SearchSceneViewController: BaseViewController {
 
     //MARK: update state
     override func newState(state: AppState) {
+        self.update(state: state)
+        super.newState(state: state)
+    }
     
+    private func update(state: AppState) {
         if let searchCriteria = state.property.searchCriteria {
             searchView?.update(searchCriteria: searchCriteria)
         }
-        super.newState(state: state)
+        if let errorMessage = state.errorMessage, !errorMessage.isEmpty {
+            self.showAlert(errorMessage: errorMessage)
+        }
     }
     
     //MARK: user action
@@ -39,7 +45,7 @@ class SearchSceneViewController: BaseViewController {
         searchView?.locationButtonOnClick = self.searchByCurrentLocation
         self.view.addSubview(searchView!)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

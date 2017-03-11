@@ -47,7 +47,7 @@ struct PropertyActionCreater {
     }
 
 
-    func searchPropertiesByCurrentLocation() -> AsyncActionCreator {
+    func searchPropertiesByCurrentLocation(_ nextStep:(() -> Void)?) -> AsyncActionCreator {
 
         return { maybeState, store, callback in
             store.dispatch(StartLoading())
@@ -57,7 +57,7 @@ struct PropertyActionCreater {
                         placeName:nil,
                         centerPoint: currentLocation
                     )
-                    callback(self.searchProperties(searchCriteria: searchCriteria, nil))
+                    callback(self.searchProperties(searchCriteria: searchCriteria, nextStep))
                     },
                 fail: { errorMessage in
                         store.dispatch(SaveErrorMessage(errorMessage: errorMessage))

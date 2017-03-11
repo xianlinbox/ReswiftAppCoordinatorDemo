@@ -22,13 +22,14 @@ class BaseViewController: UIViewController, StoreSubscriber {
         } else {
             self.activityInd.stopAnimating()
         }
-
-        if let errorMessage = state.errorMessage, !errorMessage.isEmpty {
-            self.appCoordinator?.showAlert(errorMessage: errorMessage)
-            mainStore.dispatch(SaveErrorMessage(errorMessage: ""))
-        }
     }
 
+    func showAlert(errorMessage:String) {
+        let alert = UIAlertController(title: "Oops!", message:errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.navigationController?.topViewController?.present(alert, animated: true)
+    }
+    
     //MARK: lifecycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

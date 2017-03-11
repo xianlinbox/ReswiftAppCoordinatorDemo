@@ -13,6 +13,7 @@ class PropertyDetailSceneViewController: BaseViewController {
     //MARK: update state
     override func newState(state: AppState) {
         if let property = state.property.properties?[state.property.selectedProperty] {
+            print("start updating...")
             self.propertyDetailView?.update(property: property)
         }
 

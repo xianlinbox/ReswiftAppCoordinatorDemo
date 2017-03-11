@@ -17,17 +17,25 @@ class SearchSceneCoordinator: AppCoordinator, SearchSceneCoordinatorProtocol {
     let propertyActionCreater = PropertyActionCreater()
     
     func searchByCity(searchCriteria:SearchCriteria) {
+        mainStore.dispatch(SaveErrorMessage(errorMessage: ""))
         mainStore.dispatch(
             propertyActionCreater.searchProperties(searchCriteria: searchCriteria){
-                let searchResultVC = SearchResultSceneViewController();
-                let searchResultCoordinator = SearchResultsSceneCoordinator(self.rootVC)
-                searchResultVC.searchResultCoordinator = searchResultCoordinator
-                self.rootVC.pushViewController(searchResultVC, animated: true)
+                self.pushSearchResultViewController()
             }
         )
     }
     
     func searchByCurrentLocation() {
-        mainStore.dispatch(propertyActionCreater.searchPropertiesByCurrentLocation())
+        mainStore.dispatch(SaveErrorMessage(errorMessage: ""))
+        mainStore.dispatch(propertyActionCreater.searchPropertiesByCurrentLocation(){
+            self.pushSearchResultViewController()
+        })
+    }
+    
+    private func pushSearchResultViewController() {
+        let searchResultVC = SearchResultSceneViewController();
+        let searchResultCoordinator = SearchResultsSceneCoordinator(self.rootVC)
+        searchResultVC.searchResultCoordinator = searchResultCoordinator
+        self.rootVC.pushViewController(searchResultVC, animated: true)
     }
 }
